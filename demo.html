@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script data-require="angular.js@*" data-semver="1.2.1" src="http://code.angularjs.org/1.2.1/angular.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-app="test" ng-controller="TestController">
+    <div class="container">
+      <div class="offset" ng-repeat="offset in offsets" ng-style="{left: offset.left + 'px', top: offset.top + 'px', width: offset.width + 'px', height: offset.height + 'px'}"></div>
+      <div class="row_line" ng-repeat="row_line in blocks.row_lines" ng-repeat="{left: 0, right: 0; top: row_line + 'px'; height: '1px'}"></div>
+      <div class="col" ng-repeat="col in blocks.cols" ng-style="{left: col.left + 'px', width: col.height + 'px'}"></div>
+      <div class="row" ng-repeat="row in blocks.rows" ng-style="{top: row.top + 'px', height: row.height + 'px'}"></div>
+      <div class="block" ng-repeat="block in blocks.blocks" ng-style="style_from_obj(block)"></div>
+    </div>
+
+  </body>
+             
+</html>
