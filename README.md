@@ -1,2 +1,4 @@
-# UI Tour - helping you help others
+UI-Tour
+
+Angular service and directives for creating ui tours
 
